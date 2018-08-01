@@ -17,14 +17,21 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			//$userId = $event['source']['userId'];
 			switch($event['message']['text'])	{
-				case "เปิดไฟ" : send($event, "เปิดไฟแล้วค่ะ"); break;
-				case "ปิดไฟ" : send($event, "ปิดไฟแล้วค่ะ"); break;
+				case "เปิดอุปกรณ์ 1" : send($event, "เปิดอุปกรณ์ 1 แล้วค่ะ", "http://kscyber.ddns.net/?D=1&I=1"); break;
+				case "ปิดอุปกรณ์ 1" : send($event, "ปิดอุปกรณ์ 1 แล้วค่ะ", "http://kscyber.ddns.net/?D=1&I=0"); break;
+				case "เปิดอุปกรณ์ 2" : send($event, "เปิดอุปกรณ์ 2 แล้วค่ะ", "http://kscyber.ddns.net/?D=2&I=1"); break;
+				case "ปิดอุปกรณ์ 2" : send($event, "ปิดอุปกรณ์ 2 แล้วค่ะ", "http://kscyber.ddns.net/?D=2&I=0"); break;
+				case "เปิดอุปกรณ์ 3" : send($event, "เปิดอุปกรณ์ 3 แล้วค่ะ", "http://kscyber.ddns.net/?D=3&I=1"); break;
+				case "ปิดอุปกรณ์ 3" : send($event, "ปิดอุปกรณ์ 3 แล้วค่ะ", "http://kscyber.ddns.net/?D=3&I=0"); break;
+				case "เปิดทั้งหมด" : send($event, "เปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/open_all"); break;
+				case "ปิดทั้งหมด" : send($event, "ปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/close_all"); break;
+				default : send($event, "ไม่พบคำสั่ง\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2"); break;
 			}
 		}
 	}
 }
 echo "OK";
-function send($event, $message) {
+function send($event, $message, $url="") {
 	$data = [
 		'replyToken' => $event['replyToken'],
 		'messages' => [[
