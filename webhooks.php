@@ -45,12 +45,6 @@ function get_content($arr_data) {
 	return file_get_contents($url, false, $context);
 }
 function send($event, $message, $url="") {
-	if( $url!="" ) {
-		$data1 = array(
-			"url" => $url,
-		);
-		$result = get_content($data1);
-	}
 	$data2 = [
 		'replyToken' => $event['replyToken'],
 		'messages' => [[
@@ -59,6 +53,12 @@ function send($event, $message, $url="") {
 		]],
 	];
 	post($data2);
+	if( $url!="" ) {
+		$data1 = array(
+			"url" => $url,
+		);
+		$result = get_content($data1);
+	}
 }
 function post($data) {
 	global $access_token;
