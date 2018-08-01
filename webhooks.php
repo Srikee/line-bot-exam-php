@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 				case "ปิดอุปกรณ์ 3" : send($event, "ปิดอุปกรณ์ 3 แล้วค่ะ", "http://kscyber.ddns.net/?D=3&I=0"); break;
 				case "เปิดทั้งหมด" : send($event, "เปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/open_all"); break;
 				case "ปิดทั้งหมด" : send($event, "ปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/close_all"); break;
-				default : send($event, "ไม่พบคำสั่ง"); send($event, "พิมพ์คำสั่งดังนี้นะค่ะ\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2\nเปิดอุปกรณ์ 3\nปิดอุปกรณ์ 1\nปิดอุปกรณ์ 2\nปิดอุปกรณ์ 3\nเปิดทั้งหมด\nปิดทั้งหมด"); break;
+				default : send($event, "ไม่พบคำสั่ง\n\nพิมพ์คำสั่งดังนี้นะค่ะ\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2\nเปิดอุปกรณ์ 3\nปิดอุปกรณ์ 1\nปิดอุปกรณ์ 2\nปิดอุปกรณ์ 3\nเปิดทั้งหมด\nปิดทั้งหมด"); break;
 			}
 		}
 	}
