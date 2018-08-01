@@ -25,21 +25,40 @@ if (!is_null($events['events'])) {
 				case "ปิดอุปกรณ์ 3" : send($event, "ปิดอุปกรณ์ 3 แล้วค่ะ", "http://kscyber.ddns.net/?D=3&I=0"); break;
 				case "เปิดทั้งหมด" : send($event, "เปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/open_all"); break;
 				case "ปิดทั้งหมด" : send($event, "ปิดทั้งหมด แล้วค่ะ", "http://kscyber.ddns.net/close_all"); break;
-				default : send($event, "ไม่พบคำสั่ง\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2"); break;
+				default : send($event, "ไม่พบคำสั่ง"); send($event, "พิมพ์คำสั่งดังนี้นะค่ะ\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2\nเปิดอุปกรณ์ 3\nปิดอุปกรณ์ 1\nปิดอุปกรณ์ 2\nปิดอุปกรณ์ 3\nเปิดทั้งหมด\nปิดทั้งหมด"); break;
 			}
 		}
 	}
 }
 echo "OK";
+function get_content($arr_data) {
+	$url = $arr_data["url"];
+	$postdata = http_build_query($arr_data);
+	$opts = array('http' =>
+		array(
+			'method'  => 'POST',
+			'header'  => 'Content-type: application/x-www-form-urlencoded',
+			'content' => $postdata
+		)
+	);
+	$context = stream_context_create($opts);
+	return file_get_contents($url, false, $context);
+}
 function send($event, $message, $url="") {
-	$data = [
+	if( $url!="" ) {
+		$data1 = array(
+			"url" => $url,
+		);
+		$result = get_content($data1);
+	}
+	$data2 = [
 		'replyToken' => $event['replyToken'],
 		'messages' => [[
 			'type' => 'text',
 			'text' => $message
 		]],
 	];
-	post($data);
+	post($data2);
 }
 function post($data) {
 	global $access_token;
