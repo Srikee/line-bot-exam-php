@@ -35,7 +35,7 @@ echo "OK";
 function map_data($text) {
 	$arr = array(
 		array(
-			"text"=>"เปิดอุปกรณ์ 1",
+			"text"=>"เปิดอุปกรณ์ 1xx",
 			"similar"=>array("เปิดอุปกรณ์หนึ่ง", "เปิด 1", "เปิดหนึ่ง", "เปิดไฟ 1", "เปิดไฟหนึ่ง"),
 			"url"=>"http://kscyber.ddns.net/?D=1&I=1"
 		),
