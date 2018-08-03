@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			send($event, $map[0], $map[1]);
 /*
 			switch($event['message']['text'])	{
-				case "เปิดอุปกรณ์ 1" : send($event, "เปิดอุปกรณ์ 1 แล้วค่ะ", "http://kscyber.ddns.net/?D=1&I=1"); break;
+				case "เปิดอุปกรณ์ 1xx" : send($event, "เปิดอุปกรณ์ 1 แล้วค่ะ", "http://kscyber.ddns.net/?D=1&I=1"); break;
 				case "ปิดอุปกรณ์ 1" : send($event, "ปิดอุปกรณ์ 1 แล้วค่ะ", "http://kscyber.ddns.net/?D=1&I=0"); break;
 				case "เปิดอุปกรณ์ 2" : send($event, "เปิดอุปกรณ์ 2 แล้วค่ะ", "http://kscyber.ddns.net/?D=2&I=1"); break;
 				case "ปิดอุปกรณ์ 2" : send($event, "ปิดอุปกรณ์ 2 แล้วค่ะ", "http://kscyber.ddns.net/?D=2&I=0"); break;
