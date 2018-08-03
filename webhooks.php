@@ -35,39 +35,33 @@ echo "OK";
 function map_data($text) {
 	$arr = array(
 		array(
-			"text"=>"เปิดอุปกรณ์ 11",
+			"text"=>"เปิดอุปกรณ์ 1",
 			"similar"=>array("เปิดอุปกรณ์หนึ่ง", "เปิด 1", "เปิดหนึ่ง", "เปิดไฟ 1", "เปิดไฟหนึ่ง"),
-			//"url"=>"http://kscyber.ddns.net/?D=1&I=1"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D16?value=1"
 		),
 		array(
 			"text"=>"เปิดอุปกรณ์ 2",
 			"similar"=>array("เปิดอุปกรณ์สอง", "เปิด 2", "เปิดสอง", "เปิดไฟ 2", "เปิดไฟสอง"),
-			//"url"=>"http://kscyber.ddns.net/?D=2&I=1"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D5?value=1"
 		),
 		array(
 			"text"=>"เปิดอุปกรณ์ 3",
 			"similar"=>array("เปิดอุปกรณ์สาม", "เปิด 3", "เปิดสาม", "เปิดไฟ 3", "เปิดไฟสาม"),
-			//"url"=>"http://kscyber.ddns.net/?D=3&I=1"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D4?value=1"
 		),
 		array(
 			"text"=>"ปิดอุปกรณ์ 1",
 			"similar"=>array("ปิดอุปกรณ์หนึ่ง", "ปิด 1", "ปิดหนึ่ง", "ปิดไฟ 1", "ปิดไฟหนึ่ง"),
-			//"url"=>"http://kscyber.ddns.net/?D=1&I=0"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D16?value=0"
 		),
 		array(
 			"text"=>"ปิดอุปกรณ์ 2",
 			"similar"=>array("ปิดอุปกรณ์สอง", "ปิด 2", "ปิดสอง", "ปิดไฟ 2", "ปิดไฟสอง"),
-			//"url"=>"http://kscyber.ddns.net/?D=2&I=0"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D5?value=0"
 		),
 		array(
 			"text"=>"ปิดอุปกรณ์ 3",
 			"similar"=>array("ปิดอุปกรณ์สาม", "ปิด 3", "ปิดสาม", "ปิดไฟ 3", "ปิดไฟสาม"),
-			//"url"=>"http://kscyber.ddns.net/?D=3&I=0"
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D4?value=0"
 		),
 		array(
