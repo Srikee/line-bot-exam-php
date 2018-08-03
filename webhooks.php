@@ -89,7 +89,7 @@ function get_content($arr_data) {
 	$postdata = http_build_query($arr_data);
 	$opts = array('http' =>
 		array(
-			'method'  => 'POST',
+			'method'  => 'GET',
 			'header'  => 'Content-type: application/x-www-form-urlencoded',
 			'content' => $postdata
 		)
