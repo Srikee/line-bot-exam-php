@@ -64,7 +64,7 @@ function map_data($text) {
 			"similar"=>array("ปิดอุปกรณ์สาม", "ปิด 3", "ปิดสาม", "ปิดไฟ 3", "ปิดไฟสาม"),
 			"url"=>"http://188.166.206.43/2489cb10e87b42579203a17636ad804a/update/D4?value=0"
 		),
-		array(
+		/*array(
 			"text"=>"เปิดทั้งหมด",
 			"similar"=>array("เปิดทุกอย่าง", "เปิดทุกตัว", "เปิดหมด"),
 			"url"=>"http://kscyber.ddns.net/open_all"
@@ -73,7 +73,7 @@ function map_data($text) {
 			"text"=>"ปิดทั้งหมด",
 			"similar"=>array("ปิดทุกอย่าง", "ปิดทุกตัว", "ปิดหมด"),
 			"url"=>"http://kscyber.ddns.net/close_all"
-		),
+		),*/
 	);
 	$str = "";
 	foreach ($arr as $key => $value) {
