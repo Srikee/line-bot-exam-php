@@ -75,14 +75,16 @@ function map_data($text) {
 			"url"=>"http://kscyber.ddns.net/close_all"
 		),
 	);
+	$str = "";
 	foreach ($arr as $key => $value) {
 		$t = $value["text"];
+		$str .= "\n".$t;
 		if( $t==$text ) return array($t." แล้วค่ะ", $value["url"]);
 		foreach ($value["similar"] as $key2 => $value2) {
 			if( $value2==$text ) return array($t." แล้วค่ะ", $value["url"]);
 		}
 	}
-	return array($t."ไม่พบคำสั่ง\n\nพิมพ์คำสั่งดังนี้นะค่ะ\nเปิดอุปกรณ์ 1\nเปิดอุปกรณ์ 2\nเปิดอุปกรณ์ 3\nปิดอุปกรณ์ 1\nปิดอุปกรณ์ 2\nปิดอุปกรณ์ 3\nเปิดทั้งหมด\nปิดทั้งหมด", "");
+	return array($t."ไม่พบคำสั่ง\n\nพิมพ์คำสั่งดังนี้นะค่ะ".$str, "");
 }
 function get_content($arr_data) {
 	$url = $arr_data["url"];
